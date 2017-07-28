@@ -1,0 +1,115 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+
+    <button type="button" class="signInButton btn btn-success navbar-right" data-toggle="modal" data-target="#signUpModal">Sign In</button>
+
+    <div class="navbar-header">
+      <a><h1 class="appTitle" ui-sref="home">Scour the Tower</a><small><em> Living Labido Loco</em></small></h1>
+      <!-- Modal -->
+      <div class="modal fade" id="signUpModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Scour the Tower Sign In</h4>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div>
+                  <label for="title">Email Adress</label>
+                  <input id="first" class="form-control" required>
+                </div>
+                <div>
+                  <label for="body">Password</label>
+                  <input id="last" class="form-control" required></input>
+                </div>
+                </br>
+                <div class="form-group">
+                  <input type="submit" value="Sign In" class="btn btn-primary">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="pull-right">
+  <button type="button" class="signUpButton btn btn-info pull-right" data-toggle="modal" data-target="#signInModal">Sign Up</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="signInModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Scour the Tower Sign Up</h4>
+        </div>
+        <div class="modal-body">
+          <form class="newResForm" ng-submit="$ctrl.addUser()">
+            <div>
+              <label for="title">First</label>
+              <input id="first" ng-model="$ctrl.newUser.first" class="form-control " required>
+            </div>
+            <div>
+              <label for="body ">Last</label>
+              <input id="last" ng-model="$ctrl.newUser.last" class="form-control " required>
+            </div>
+            <div>
+              <label for="author ">Email Address</label>
+              <input type="email" id="email " ng-model="$ctrl.newUser.email" class="form-control " required>
+            </div>
+            <div>
+              <label for="image-url ">Image URL</label>
+              <input id="image-url" ng-model="$ctrl.newUser.imageUrl" class="form-control " required>
+            </div>
+            <div>
+              <label for="password ">Password</label>
+              <input id="password" ng-model="$ctrl.newUser.password" class="form-control " required>
+            </div>
+            <div class="form-group">
+              <label for="sel1 ">Sex:</label>
+              <select ng-model="$ctrl.newUser.sex" class="form-control" id="sex ">
+                <option disabled selected>
+                  choose one
+                </option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="sel1 ">Select Tower:</label>
+              <select ng-model="$ctrl.newUser.tower_id" class="form-control" id="tower ">
+                <option disabled selected>
+                  choose one
+                </option>
+                <option value=1>Tower 1</option>
+                <option value=2>Tower 2</option>
+                <option value=3>Tower 3</option>
+              </select>
+            </div>
+            </br>
+            <div class="form-group ">
+              <button type="submit" class="btn btn-primary">
+            Sign Up
+          </button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary" ui-sref="users">residents</button>
+
+</div>

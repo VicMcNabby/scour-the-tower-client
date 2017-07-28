@@ -1,0 +1,44 @@
+.media-object {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+[ng-click] {
+  cursor: pointer;
+}
+
+main.container {
+  margin-bottom: 4em;
+}
+
+.appTitle {
+  color: white;
+  cursor: pointer;
+}
+
+.signInButton {
+  margin: 15px 70px 0 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar {
+  height: 18vh;
+}
+
+.modal-body {
+  background-color: #eff4f4;
+}
+
+.well {
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.well:hover {
+  box-shadow: 1px 1px black;
+}
+
+.signInButton:hover {
+  box-shadow: 1px 1px black;
+}

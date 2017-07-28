@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-12">
+
+    <div class="well" ng-repeat="tower in $ctrl.towers">
+      <div class="media-left">
+        <img class="media-object" ng-src="{{tower.imageURL}}">
+      </div>
+      <div class="media-body">
+        <h2 class="media-heading">
+          {{tower.name}}
+        </h2>
+        <div class="text-right authors">
+          <strong><em></em></strong>
+        </div>
+        <p>
+          {{tower.description}}
+        </p>
+        <div class="form-inline">
+
+          <i class="glyphicon glyphicon-user"></i>
+          <a ng-click="showOccupants=!showOccupants">
+            {{tower.units}} UNITS
+        </a>
+        </div>
+        <div class="row">
+          <div ng-show="showOccupants" class="col-md-offset-1">
+            <hr>
+            <p>
+              Person 1
+              </br>
+              Person 2
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
